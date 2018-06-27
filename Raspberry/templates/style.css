@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0 0 0 0;
+}
+
+.box1 {
+  margin: 10 0 10 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.col-1 {width:50%;}
+[class*="col-"]{
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.row::after {
+  content:"";
+  clear:both;
+  display: table;
+}
+
+body {
+  background: red;
+  color: yellow;
+}
+
+.button {
+  background-color: yellow;
+}
+
+.button1:focus {
+  background-color: blue;
+}
+
+.button1:hover {
+  background-color: red;
+}
+
+
