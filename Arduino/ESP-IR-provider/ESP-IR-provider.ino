@@ -1,17 +1,13 @@
 /*
- *  This sketch demonstrates how to set up a simple HTTP-like server.
- *  The server will set a GPIO pin depending on the request
- *    http://server_ip/gpio/0 will set the GPIO2 low,
- *    http://server_ip/gpio/1 will set the GPIO2 high
- *  server_ip is the IP address of the ESP8266 module, will be 
- *  printed to Serial when the module is connected.
+ *  This sketch sets up the ESP8266 as a Socket Server.
+ *  The esp has a IR-led connected on GPIO2.
  */
 
 #include <ESP8266WiFi.h>
 #include <IRremoteESP8266.h>
 #include <IRsend.h>
 
-#define IR_LED 2  // ESP8266 GPIO pin to use. Recommended: 4 (D2).
+#define IR_LED 2  // ESP8266 GPIO pin set to GPIO2
 
 IRsend irsend(2);  // Set the GPIO to be used to sending the message.
 

@@ -56,8 +56,8 @@ def remove(sig):
 
 @app.route('/', methods = ['POST', 'GET'])
 def index():
-  port = 12478
-  ip = '192.168.192.29'
+  port = **** #set port
+  ip = '***'  #set IP adress
   items = getRemoteButtons()
   if request.method == 'POST':
      s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
