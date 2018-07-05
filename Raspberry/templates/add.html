@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <link rel="stylesheet" href='/static/style.css'/>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <h1 class="center">{{header}}</h1>
+    <form action="" method="post">
+      <div class="row box1">
+        <p class="col-1"> Signalnumber: </p>
+        {% if obj is defined %}
+          <input class="col-1" type="text" name="sig" value="{{obj[0]}}" {{editable}}></input>
+        {% else %}
+          <input class="col-1" type="text" name="sig" {{editable}}></input>
+        {% endif %}
+      </div>
+      <div class="row box1">
+        <p class="col-1"> Description: </p>
+        {% if obj is defined %}
+        <input class="col-1" type="text" name="description" value="{{obj[1]}}" {{editable}}></input>
+        {% else %}
+        <input class="col-1" type="text" name="description" {{editable}}></input>
+        {% endif %}
+      </div>
+      <div class="row box1">
+        <p class="col-1"> Name: </p>
+        {% if obj is defined %}
+        <input class="col-1" type="text" name="name" value="{{obj[2]}}" {{editable}}></input>
+        {% else %}
+        <input class="col-1" type="text" name="name" {{editable}}></input>
+        {% endif %}
+      </div>
+      <div class="row box1">
+        <p class="col-1"> Signaltype: </p>
+        {% if obj is defined %}
+        <input class="col-1" type="text" name="type" value="{{obj[3]}}" {{editable}}></input>
+        {% else %}
+        <input class="col-1" type="text" name="type" {{editable}}></input>
+        {% endif %}
+      </div>
+      <div class="center">
+        <input type="submit"></input>
+      </div>
+    </form>  
+  </body>
+  <footer id="footer">
+    <ul>
+      <a href="/"><li>Home</li></a>
+      <a href="/add"><li>Knop toevoegen</li></a>
+      <a href="/remove"><li>Knop verwijderen</li></a>
+      <a href="/edit"><li>Knop wijzigen</li></a>
+    </ul>
+  </footer>
+</html>
+

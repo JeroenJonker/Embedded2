@@ -1,0 +1,23 @@
+<html>
+  <header>
+    <link rel="stylesheet" href='/static/style.css'/>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+  </header>
+  <body>
+    <h1>{{header}}</h1>
+    <form class="row" action="" method="post">
+    {% for obj in marks %}
+      <button class="col-1" name={{obj[0]}} value={{obj[3]}}>{{obj[1]}}</button>
+    {% endfor %}
+    </form>
+  </body>
+  <footer id="footer">
+    <ul>
+      <a href="/"><li>Home</li></a>
+      <a href="/add"><li>Knop toevoegen</li></a>
+      <a href="/remove"><li>Knop verwijderen</li></a>
+      <a href="/edit"><li>Knop wijzigen</li></a>
+    </ul>
+  </footer>
+</html>
+
